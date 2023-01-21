@@ -64,18 +64,13 @@ function styles () {
     .pipe(browserSync.stream())
 }
 
-// Move the javascript files into our js folder
+
 function js () {
   return gulp.src([paths.js.bootstrap, paths.js.popper])
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream())
 }
-
-// Static Server + watching scss/html files
 function serve () {
-/*  browserSync.init({
-    proxy: '/',
-  })*/
 
   gulp.watch([paths.scss.watch, paths.scss.bootstrap], styles).on('change', browserSync.reload)
 }
