@@ -28,6 +28,14 @@ header{
     border: none;
     background: transparent;
   }
+  .dropdown-toggle::after{
+    content: url('../images/Icon/Path.png');
+    width: 8px;
+    position: relative;
+    top: 3px;
+    font-weight: 900;
+    border: none;
+  }
   .header_top{
     display: flex;
     .logo {
